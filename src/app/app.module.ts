@@ -23,6 +23,7 @@ import { AuthGuard } from './_guards/auth.guard';
 import { AuthenticationService } from './_services/authentication.service';
 import { UserService } from './_services/user.service';
 import { HttpModule } from '@angular/http';
+import { APP_CONFIG, AppConfig } from './api.config';
 
 
 
@@ -50,7 +51,8 @@ import { HttpModule } from '@angular/http';
   providers: [LoginService,
     AuthGuard,
     AuthenticationService,
-    UserService],
+    UserService,
+    { provide: APP_CONFIG, useValue: AppConfig }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

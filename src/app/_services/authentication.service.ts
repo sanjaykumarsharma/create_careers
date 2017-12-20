@@ -1,20 +1,23 @@
-﻿import { Injectable } from '@angular/core';
+﻿import { Injectable, InjectionToken, Inject } from '@angular/core';
 import { Http, Headers, Response } from '@angular/http';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+import { APP_CONFIG, AppConfig } from '../api.config';
 
 @Injectable()
 export class AuthenticationService {
     public token: string;
+    apiEndpoint = '';
 
-    constructor(private http: Http) {
+    constructor(@Inject(APP_CONFIG) config: AppConfig, private http: Http) {
+        this.apiEndpoint = config.apiEndpoint;
         // set token if saved in local storage
         var currentUser = JSON.parse(localStorage.getItem('currentUser'));
         this.token = currentUser && currentUser.token;
     }
 
     login(username: string, password: string): Observable<boolean> {
-        return this.http.post('http://localhost/createcareers/api/login', JSON.stringify({ username: username, password: password }))
+        return this.http.post(this.apiEndpoint + '/login', JSON.stringify({ username: username, password: password }))
             .map((response: Response) => {
                 // login successful if there's a jwt token in the response
                 let token = response.json() && response.json().token;
