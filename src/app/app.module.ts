@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { Routes } from '@angular/router';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 import { AppComponent } from './app.component';
@@ -17,15 +17,12 @@ import { AdmissionsComponent } from './admissions/admissions.component';
 import { FacultyComponent } from './faculty/faculty.component';
 import { ProgramsComponent } from './programs/programs.component';
 import { ServicesComponent } from './services/services.component';
-
-const appRoutes: Routes = [
-   {path: '', component: HomeComponent, pathMatch: 'full'},
-   {path: 'about', component: AboutComponent},
-   {path: 'admission', component: AdmissionsComponent},
-   {path: 'faculty', component: FacultyComponent},
-   {path: 'programs', component: ProgramsComponent},
-   {path: 'services', component: ServicesComponent}
-];
+import { LoginComponent } from './login/login.component';
+import { routing } from './app.routing';
+import { AuthGuard } from './_guards/auth.guard';
+import { AuthenticationService } from './_services/authentication.service';
+import { UserService } from './_services/user.service';
+import { HttpModule } from '@angular/http';
 
 
 
@@ -39,16 +36,21 @@ const appRoutes: Routes = [
     AdmissionsComponent,
     FacultyComponent,
     ProgramsComponent,
-    ServicesComponent
+    ServicesComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes),
+    HttpModule,
+    routing,
     NgbModule.forRoot()
   ],
-  providers: [LoginService],
+  providers: [LoginService,
+    AuthGuard,
+    AuthenticationService,
+    UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -6,11 +6,11 @@
         </div>
 
         <button class="navbar-toggler bt" type="button" data-toggle="collapse" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon "></span>
+      <span class="fa fa-bars"></span>
     </button>
     </div>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngbCollapse]="isCollapsed" style="height: 1px;">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngbCollapse]="isCollapsed">
         <ul class="navbar-nav mr-auto navbar-d">
             <li class="nav-item">
                 <a class="nav-link" routerLink="/about">About</a>
@@ -109,7 +109,7 @@
             <li class="nav-item last"><a class="nav-link">Contacts</a></li> -->
 
             <li class="nav-item">
-                <a class="nav-link"><i class="fa fa-user"></i><span>Login</span></a>
+                <a class="nav-link" routerLink="/login"><i class="fa fa-user"></i><span>Login</span></a>
             </li>
 
         </ul>
