@@ -8,6 +8,9 @@ import { ServicesComponent } from './services/services.component';
 import { ProgramsComponent } from './programs/programs.component';
 import { FacultyComponent } from './faculty/faculty.component';
 import { AdmissionsComponent } from './admissions/admissions.component';
+import { CreativeWritingComponent } from './creative-writing/creative-writing.component';
+import { BlogComponent } from './blog/blog.component';
+import { BlogDetailsComponent } from './blog-details/blog-details.component';
 
 
 const appRoutes: Routes = [
@@ -16,8 +19,11 @@ const appRoutes: Routes = [
     { path: 'about', component: AboutComponent },
     { path: 'admission', component: AdmissionsComponent },
     { path: 'faculty', component: FacultyComponent },
-    { path: 'programs', component: ProgramsComponent },
     { path: 'services', component: ServicesComponent },
+    { path: 'blog', component: BlogComponent },
+    { path: 'blog-details', component: BlogDetailsComponent },
+    { path: 'courses', component: ProgramsComponent },
+    { path: 'creative-writing', component: CreativeWritingComponent },
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
 ];

@@ -24,6 +24,10 @@ import { AuthenticationService } from './_services/authentication.service';
 import { UserService } from './_services/user.service';
 import { HttpModule } from '@angular/http';
 import { APP_CONFIG, AppConfig } from './api.config';
+import { CreativeWritingComponent } from './creative-writing/creative-writing.component';
+import { CourseSectionComponent } from './course-section/course-section.component';
+import { BlogComponent } from './blog/blog.component';
+import { BlogDetailsComponent } from './blog-details/blog-details.component';
 
 
 
@@ -38,7 +42,11 @@ import { APP_CONFIG, AppConfig } from './api.config';
     FacultyComponent,
     ProgramsComponent,
     ServicesComponent,
-    LoginComponent
+    LoginComponent,
+    CreativeWritingComponent,
+    CourseSectionComponent,
+    BlogComponent,
+    BlogDetailsComponent
   ],
   imports: [
     BrowserModule,

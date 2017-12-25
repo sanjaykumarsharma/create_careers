@@ -86,8 +86,7 @@ body a {
     padding: 10px 15px;
     text-align: center;
     color: #fff !important;
-    font-weight: 100;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 .dropdown-menu.columns-2 {
@@ -1086,7 +1085,7 @@ i.chain_1 {
 
 .footer {
     background: #f2f4f5;
-    padding: 5em 0;
+    padding: 3em 0;
 }
 
 table.table_working_hours {
@@ -1241,7 +1240,7 @@ ul.footer_list li a:hover {
 }
 
 .copy {
-    margin: 2em 0 0 0;
+    margin: 2em 0 0 2em;
     text-align: center;
 }
 
@@ -4059,4 +4058,36 @@ form.contact_form {
     .grid_3.grid_5 {
         margin: 2em 0 0 0;
     }
+}
+
+
+/* my css */
+
+.heading {
+    color: #c00000;
+}
+
+.text-color {
+    color: #777;
+    font-size: 0.95em;
+    margin: 1em 0 1em;
+}
+
+ol li {
+    counter-increment: list;
+    list-style-type: none;
+    position: relative;
+}
+
+ol li:before {
+    color: #f97668;
+    content: counter(list) ".";
+    left: -32px;
+    position: absolute;
+    text-align: right;
+    width: 26px;
+}
+
+.carousel-item {
+    max-height: 400px !important;
 }

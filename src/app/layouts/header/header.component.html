@@ -13,6 +13,9 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngbCollapse]="isCollapsed">
         <ul class="navbar-nav mr-auto navbar-d">
             <li class="nav-item">
+                <a class="nav-link" routerLink="/">Home</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" routerLink="/about">About</a>
             </li>
             <li class="nav-item">
@@ -22,27 +25,28 @@
                 <a class="nav-link" routerLink="/faculty">Faculty</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/programs">Programs</a>
+                <a class="nav-link" routerLink="/courses">Courses</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" routerLink="/services">Services</a>
             </li>
-
-
-
-
-            <!-- <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
-          </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/blog">Blog</a>
             </li>
-            <li class="nav-item dropdown mega-dropdown active">
+
+            <!-- <li class="nav-item dropdown" ngbDropdown>
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" ngbDropdownToggle>
+            Dropdown
+               </a>
+                <div class="dropdown-menu" ngbDropdownMenu aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item">Action</a>
+                    <a class="dropdown-item">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item">Something else here</a>
+                </div>
+            </li> -->
+
+            <!--  <li class="nav-item dropdown mega-dropdown active">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Courses<span class="caret"></span></a>
                 <div class="dropdown-menu mega-dropdown-menu">
                     <div class="container-fluid">
